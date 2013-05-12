@@ -82,7 +82,5 @@ function is_heb_leap_year($year) {
 // For example: prints the holidays in order of next upcoming along with (Gregorian) dates of them, i.e. the first full day of them, not the date on which they begin at sundown.
 $holidays = sorted_holidays();
 foreach ($holidays as $until => $holiday) {
-  $until_ts = jdtounix(unixtojd() + $until);
-  $date = date('F j, Y', $until_ts);
   print $holiday['name'] . ": " . $holiday['string'] . "\n";
 }
