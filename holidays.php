@@ -32,7 +32,7 @@ function sorted_holidays() {
     if ($end_jd < $today_jd) {
       // This holiday has already passed in the current Jewish year. Advance to the next one.
       if ($holiday['name'] == 'Purim') {
-        // Small hack to reset the Purim month if we've advanced into next year, and it's leap year status is different than the previous year's status.
+        // Small hack to reset the Purim month if we've advanced into next year, and its leap year status is different than the previous year's status.
         $holiday['month'] = is_heb_leap_year($jyear+1) ? 7 : 6;
       }
       $jd = JewishToJD($holiday['month'], $holiday['day'], $jyear+1);
