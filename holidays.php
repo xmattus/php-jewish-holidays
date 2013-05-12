@@ -69,6 +69,7 @@ function sorted_holidays() {
 }
 
 // Returns true if this is one of the leap years of the metonic cycle (in which a second month of Adar is added).
+// For more on the math, see http://en.wikipedia.org/wiki/Metonic_cycle
 function is_heb_leap_year($year) {
   $year = (int)$year;
   if ($year % 19 == 0 || $year % 19 == 3 || $year % 19 == 6 || $year % 19 == 8 || $year % 19 == 11 || $year % 19 == 14 || $year % 19 == 17) {
